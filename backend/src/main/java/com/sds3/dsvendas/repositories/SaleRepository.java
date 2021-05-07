@@ -10,7 +10,7 @@ import com.sds3.dsvendas.entities.Sale;
 
 public interface SaleRepository extends JpaRepository<Sale, Long> {
 
-	@Query("SELECT new com.sds3.dsvendas.dto.SaleSumDTO(obj.seller, SUM(obj.amout)) "
+	@Query("SELECT new com.sds3.dsvendas.dto.SaleSumDTO(obj.seller, SUM(obj.amount)) "
 			+ " FROM Sale AS obj GROUP BY obj.seller")
-	List<SaleSumDTO> amountGroupeBySeller();
+	List<SaleSumDTO> amountGroupedBySeller();
 }

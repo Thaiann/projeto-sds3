@@ -28,8 +28,8 @@ public class SaleController {
 	}
 	
 	@GetMapping(value = "/sum-by-seller")
-	public ResponseEntity<List<SaleSumDTO>> amountGroupeBySeller(){
-		List<SaleSumDTO> list = service.amountGroupeBySeller();
+	public ResponseEntity<List<SaleSumDTO>> amountGroupedBySeller(){
+		List<SaleSumDTO> list = service.amountGroupedBySeller();
 		return ResponseEntity.ok(list);
 	}
 }
